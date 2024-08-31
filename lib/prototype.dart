@@ -46,7 +46,6 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-
 class _MyHomePageState extends State<MyHomePage> {
   final List<String> _lessons = [
     'Introduction',
@@ -67,12 +66,12 @@ class _MyHomePageState extends State<MyHomePage> {
     'Review Your Portfolio',
   ];
 
- final TextEditingController _searchController = TextEditingController();
+  final TextEditingController _searchController = TextEditingController();
   List<String> _filteredLessons = [];
   Set<String> _bookmarkedLessons = {}; // To keep track of bookmarked lessons
   int? _selectedLessonIndex;
 
-   @override
+  @override
   void initState() {
     super.initState();
     _filteredLessons = _lessons;
@@ -433,7 +432,7 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       _selectedLessonIndex = index;
     });
-  Future.delayed(const Duration(milliseconds: 200), () {
+    Future.delayed(const Duration(milliseconds: 200), () {
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => targetPage),
@@ -513,8 +512,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     Container(width: 48),
                   ],
                 ),
-                const SizedBox(height: 20),
-                const SizedBox(height: 50),
+                const SizedBox(height: 5),
+                const SizedBox(height: 5),
                 TextField(
                   controller: _searchController,
                   decoration: InputDecoration(
@@ -530,7 +529,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     fillColor: Colors.grey[200],
                   ),
                 ),
-                const SizedBox(height: 200),
+                const SizedBox(height: 70),
                 Expanded(
                   child: ListView.builder(
                     itemCount: _filteredLessons.length,

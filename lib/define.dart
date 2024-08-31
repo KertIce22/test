@@ -99,7 +99,6 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-
   void _openLesson(int index) {
     String lessonTitle = _filteredLessons[index];
     Widget targetPage;
@@ -404,7 +403,8 @@ class _MyHomePageState extends State<MyHomePage> {
       );
     });
   }
- Future<void> _toggleBookmark(String lesson) async {
+
+  Future<void> _toggleBookmark(String lesson) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
       if (_bookmarkedLessons.contains(lesson)) {
@@ -430,6 +430,7 @@ class _MyHomePageState extends State<MyHomePage> {
       });
     }
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -438,7 +439,7 @@ class _MyHomePageState extends State<MyHomePage> {
           // Background Image
           Positioned.fill(
             child: Image.asset(
-              'assets/images/mainBG1.png', // Replace with your image path
+              'assets/images/DefineBG.png', // Replace with your image path
               fit: BoxFit.cover,
             ),
           ),
@@ -475,16 +476,15 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ),
                     ),
-                    // Empty container to balance the row, but not required for centering
                     Container(width: 48),
                   ],
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 5),
 
                 // Adding extra space above the search bar
                 const SizedBox(
                     height:
-                        50), // Adjust this value to move the search bar lower
+                        5), // Adjust this value to move the search bar lower
 
                 // Search Bar
                 TextField(
@@ -502,8 +502,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     fillColor: Colors.grey[200],
                   ),
                 ),
-                const SizedBox(
-                    height: 200), // Adjust space after the search bar
+                const SizedBox(height: 60), // Adjust space after the search bar
 
                 // Lessons List
                 Expanded(
@@ -520,7 +519,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         child: ListTile(
                           leading: const Icon(
                             Icons.book,
-                               color: Colors.green,
+                            color: Colors.green,
                           ),
                           title: Text(
                             lesson,

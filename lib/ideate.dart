@@ -456,12 +456,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     Container(width: 48),
                   ],
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 5),
 
                 // Adding extra space above the search bar
                 const SizedBox(
                     height:
-                        50), // Adjust this value to move the search bar lower
+                        5), // Adjust this value to move the search bar lower
 
                 // Search Bar
                 TextField(
@@ -479,8 +479,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     fillColor: Colors.grey[200],
                   ),
                 ),
-                const SizedBox(
-                    height: 200), // Adjust space after the search bar
+                const SizedBox(height: 55), // Adjust space after the search bar
 
                 // Lessons List
                 Expanded(

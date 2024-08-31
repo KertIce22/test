@@ -18,6 +18,7 @@ import 'package:test/storytelling.dart';
 import 'package:test/user_driven_prototyping.dart';
 import 'package:test/what_how_why.dart'; // Update with correct path if needed
 import 'package:shared_preferences/shared_preferences.dart';
+
 void main() {
   runApp(const Emphathize());
 }
@@ -95,6 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
           .toList();
     });
   }
+
   void _openLesson(int index) {
     String lessonTitle = _filteredLessons[index];
     Widget targetPage;
@@ -452,7 +454,8 @@ class _MyHomePageState extends State<MyHomePage> {
       );
     });
   }
-   Future<void> _toggleBookmark(String lesson) async {
+
+  Future<void> _toggleBookmark(String lesson) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
       if (_bookmarkedLessons.contains(lesson)) {
@@ -533,7 +536,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 // Adding extra space above the search bar
                 const SizedBox(
                     height:
-                        50), // Adjust this value to move the search bar lower
+                        5), // Adjust this value to move the search bar lower
 
                 // Search Bar
                 TextField(
@@ -551,11 +554,10 @@ class _MyHomePageState extends State<MyHomePage> {
                     fillColor: Colors.grey[200],
                   ),
                 ),
-                const SizedBox(
-                    height: 200), // Adjust space after the search bar
+                const SizedBox(height: 80), // Adjust space after the search bar
 
                 // Lessons List
-            Expanded(
+                Expanded(
                   child: ListView.builder(
                     itemCount: _filteredLessons.length,
                     itemBuilder: (context, index) {
