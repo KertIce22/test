@@ -145,7 +145,7 @@ class _MyHomePageState extends State<MyHomePage> {
           lessonTitleFront: 'Empathetic Data',
           lessonContentFront:
               'The difficulty with many new ideas is that they’re hard to empirically prove, leaving key decision makers no basis for comparison. The good news is, designers can create data through simple prototyping. \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'
-              'f you’re struggling to get buy-in from key stakeholders due to lack of hard data, consider building an empathetic data set, derived from real user prototype testing. \n\n\n\n\n\n\n',
+              'If you’re struggling to get buy-in from key stakeholders due to lack of hard data, consider building an empathetic data set, derived from real user prototype testing. \n\n\n\n\n\n\n',
           lessonTitleBack: 'How to gather empathetic data: ',
           lessonContentBack:
               'Take your prototype (it doesn’t need to be perfect, just usable) and place it in a context where your users currently experience your product or service. Bonus points if you can find a setting that allows users to test the current offering and the new offering.   \n\n'
@@ -515,9 +515,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         );
                       },
                     ),
-                    Expanded(
+                    const Expanded(
                       child: Center(
-                        child: const Text(
+                        child: Text(
                           'EMPATHIZE',
                           style: TextStyle(
                             fontSize: 30,
@@ -554,7 +554,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     fillColor: Colors.grey[200],
                   ),
                 ),
-                const SizedBox(height: 80), // Adjust space after the search bar
+                const SizedBox(height: 40), // Adjust space after the search bar
 
                 // Lessons List
                 Expanded(

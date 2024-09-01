@@ -47,11 +47,11 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20.0)
-                      .copyWith(top: 50.0), // Adjusted top padding
+                      .copyWith(top: 40.0), // Adjusted top padding
                   child: Text(
                     'FIVE MODES',
                     style: TextStyle(
-                      fontSize: 50.0,
+                      fontSize: 45.0,
                       fontWeight: FontWeight.w600,
                       letterSpacing: 1,
                       color: const Color.fromARGB(255, 240, 240, 240),
@@ -66,13 +66,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     textAlign: TextAlign.center,
                   ),
                 ),
-                const SizedBox(height: 50.0), // Space between text and list
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.only(
-                        top: 25.0), // Adjust top padding if needed
+                    padding: const EdgeInsets.only(top: 40.0),
                     child: ListView.builder(
-                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 40.0), // Adjust horizontal padding
                       itemCount: 5, // Number of items
                       itemBuilder: (context, index) {
                         switch (index) {
@@ -80,8 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             return _buildCard(
                               gradientColors: [Colors.blue, Colors.blueAccent],
                               text: 'EMPATHIZE',
-                              imageAsset:
-                                  'assets/images/bg.png', // Specify the image asset
+                              imageAsset: 'assets/images/bg.png',
                               onTap: () {
                                 Navigator.push(
                                   context,
@@ -97,8 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 Colors.greenAccent
                               ],
                               text: 'DEFINE',
-                              imageAsset:
-                                  'assets/images/def.png', // Specify the image asset
+                              imageAsset: 'assets/images/def.png',
                               onTap: () {
                                 Navigator.push(
                                   context,
@@ -114,8 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 Colors.deepOrangeAccent
                               ],
                               text: 'IDEATE',
-                              imageAsset:
-                                  'assets/images/idea.png', // Specify the image asset
+                              imageAsset: 'assets/images/idea.png',
                               onTap: () {
                                 Navigator.push(
                                   context,
@@ -128,8 +124,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             return _buildCard(
                               gradientColors: [Colors.red, Colors.redAccent],
                               text: 'PROTOTYPE',
-                              imageAsset:
-                                  'assets/images/pr.png', // Specify the image asset
+                              imageAsset: 'assets/images/pr.png',
                               onTap: () {
                                 Navigator.push(
                                   context,
@@ -145,8 +140,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 Colors.purpleAccent
                               ],
                               text: 'TEST',
-                              imageAsset:
-                                  'assets/images/test.png', // Specify the image asset
+                              imageAsset: 'assets/images/test.png',
                               onTap: () {
                                 Navigator.push(
                                   context,
@@ -174,98 +168,71 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => MyApp(), // Navigate to MyApp
+                    builder: (context) => const MyApp(), // Navigate to MyApp
                   ),
                 );
               },
             ),
           ),
           Align(
-            alignment: Alignment.bottomCenter,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text(
-                  'Developed by KCMJJ',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 14.0,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: 1.1,
-                    shadows: [
-                      Shadow(
-                        blurRadius: 10.0,
-                        color: Colors.black.withOpacity(0.5),
-                        offset: const Offset(2.0, 2.0),
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 10.0), // Space between text and button
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>
-                            const DevPage(), // Navigate to DevPage
-                      ),
-                    );
-                  },
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 6.0, // Reduced horizontal padding
-                      vertical: 4.0, // Reduced vertical padding
-                    ),
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [
-                          Color.fromARGB(255, 0, 219, 128), // Start color
-                          Color.fromARGB(255, 0, 176, 94), // End color
-                        ],
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                      ),
-                      borderRadius:
-                          BorderRadius.circular(20.0), // Reduced border radius
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.3),
-                          offset:
-                              const Offset(0, 4), // Reduced offset for shadow
-                          blurRadius: 8.0, // Reduced blur radius
+            alignment: Alignment.bottomRight, // Align icon to the bottom right
+            child: Padding(
+              padding: const EdgeInsets.only(
+                  right: 25.0), // Add padding to the right
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              const DevPage(), // Navigate to DevPage
                         ),
-                      ],
-                    ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Icon(
-                          Icons
-                              .contact_phone, // Change to a "Contact Us" phone icon
-                          size: 16.0, // Reduced icon size
-                          color: Colors.white,
+                      );
+                    },
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 4.0, // Horizontal padding inside the button
+                        vertical: 4.0, // Vertical padding inside the button
+                      ),
+                      decoration: BoxDecoration(
+                        gradient: const LinearGradient(
+                          colors: [
+                            Color.fromARGB(255, 0, 219, 128), // Start color
+                            Color.fromARGB(255, 0, 176, 94), // End color
+                          ],
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
                         ),
-                        const SizedBox(
-                            width:
-                                4.0), // Reduced spacing between icon and text
-                        Text(
-                          'Contact Us',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 10.0, // Reduced font size
-                            fontWeight: FontWeight.bold,
-                            letterSpacing: 1.1,
+                        borderRadius: BorderRadius.circular(
+                            20.0), // Reduced border radius
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.3),
+                            offset: const Offset(0, 4), // Shadow offset
+                            blurRadius: 8.0, // Shadow blur radius
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
+                      child: const Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Icon(
+                            Icons.info_sharp,
+                            size: 30.0, // Icon size
+                            color: Colors.white,
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                ),
-                const SizedBox(height: 20.0), // Extra space at the bottom
-              ],
+                  const SizedBox(height: 20.0), // Extra space at the bottom
+                ],
+              ),
             ),
-          ),
+          )
         ],
       ),
     );
@@ -276,18 +243,18 @@ class _MyHomePageState extends State<MyHomePage> {
     required String text,
     required String imageAsset, // Add image asset parameter
     void Function()? onTap,
-    double cardHeight = 100.0, // Adjusted card height for button style
+    double cardHeight = 87.0, // Smaller card height
     double borderRadius = 12.0,
-    EdgeInsetsGeometry padding =
-        const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
+    EdgeInsetsGeometry padding = const EdgeInsets.symmetric(
+        horizontal: 16.0, vertical: 8.0), // Adjusted padding
   }) {
     return Card(
-      elevation: 5.0, // Reduced elevation for button style
+      elevation: 3.0, // Reduced elevation
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(borderRadius),
       ),
-      margin: const EdgeInsets.symmetric(
-          vertical: 8.0), // Reduced margin for button style
+      margin:
+          const EdgeInsets.symmetric(vertical: 6.0), // Smaller vertical margin
       child: InkWell(
         onTap: onTap,
         borderRadius: BorderRadius.circular(borderRadius),
@@ -316,7 +283,7 @@ class _MyHomePageState extends State<MyHomePage> {
               text,
               style: const TextStyle(
                 color: Colors.white,
-                fontSize: 18,
+                fontSize: 16,
                 fontWeight: FontWeight.bold,
                 letterSpacing: 1.2,
               ),

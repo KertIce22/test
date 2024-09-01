@@ -34,8 +34,7 @@ class GetStartedPage extends StatelessWidget {
           // Background image that fits the height of the screen
           Image.asset(
             'assets/images/main111.png',
-            fit:
-                BoxFit.fill, // This will make the image cover the entire screen
+            fit: BoxFit.cover, // Adjust to fit the screen
           ),
           // Container for the text and button styled as a card
           Positioned(
@@ -49,7 +48,7 @@ class GetStartedPage extends StatelessWidget {
               ),
               padding: EdgeInsets.symmetric(
                 horizontal: screenWidth * 0.05,
-                vertical: screenHeight * 0.04,
+                vertical: screenHeight * 0.02,
               ),
               decoration: BoxDecoration(
                 color: const Color.fromARGB(255, 72, 134, 76).withOpacity(0.5),

@@ -1,27 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:test/assume_beginner_mindset.dart';
 import 'package:test/editing_video.dart';
 import 'package:test/empa2.dart'; // Update with correct path if needed
 import 'package:test/empathetic_data.dart';
-import 'package:test/extreme_user.dart';
 import 'package:test/feedback_capture_matrix.dart';
 import 'package:test/i_like_i_wish_what_if.dart';
 import 'package:test/identify_a_variable.dart';
-import 'package:test/improvise_to_life.dart';
-import 'package:test/interview_empathy.dart';
-import 'package:test/interview_preparation.dart';
-import 'package:test/proto2.dart';
-import 'package:test/prototype_for_empathy.dart';
 import 'package:test/prototype_to_decide.dart';
 import 'package:test/review_your_portfolio.dart';
-import 'package:test/scenes_props_roles.dart';
 import 'package:test/secondpage.dart';
 import 'package:test/shooting_video.dart';
 import 'package:test/storytelling.dart';
 import 'package:test/test2.dart';
 import 'package:test/testing_with_users.dart';
 import 'package:test/user_driven_prototyping.dart';
-import 'package:test/what_how_why.dart';
 import 'package:test/wizard_of_oz_prototyping.dart'; // Update with correct path if needed
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -230,7 +221,7 @@ class _MyHomePageState extends State<MyHomePage> {
           lessonTitleFront: 'Empathetic Data',
           lessonContentFront:
               'The difficulty with many new ideas is that they’re hard to empirically prove, leaving key decision makers no basis for comparison. The good news is, designers can create data through simple prototyping. \n'
-              'f you’re struggling to get buy-in from key stakeholders due to lack of hard data, consider building an empathetic data set, derived from real user prototype testing. \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n',
+              'If you’re struggling to get buy-in from key stakeholders due to lack of hard data, consider building an empathetic data set, derived from real user prototype testing. \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n',
           lessonTitleBack: 'How to gather empathetic data: ',
           lessonContentBack:
               'Take your prototype (it doesn’t need to be perfect, just usable) and place it in a context where your users currently experience your product or service. Bonus points if you can find a setting that allows users to test the current offering and the new offering.   \n\n'
@@ -424,9 +415,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         );
                       },
                     ),
-                    Expanded(
+                    const Expanded(
                       child: Center(
-                        child: const Text(
+                        child: Text(
                           'TEST',
                           style: TextStyle(
                             fontSize: 30,
@@ -440,7 +431,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Container(width: 48),
                   ],
                 ),
-                const SizedBox(height: 5),
+                const SizedBox(height: 20),
 
                 // Adding extra space above the search bar
                 const SizedBox(
@@ -463,7 +454,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     fillColor: Colors.grey[200],
                   ),
                 ),
-                const SizedBox(height: 60), // Adjust space after the search bar
+                const SizedBox(height: 40), // Adjust space after the search bar
 
                 // Lessons List
                 Expanded(
@@ -494,7 +485,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                   _isBookmarked(lesson)
                                       ? Icons.bookmark
                                       : Icons.bookmark_border,
-                                  color: Color.fromARGB(255, 134, 24, 185),
+                                  color:
+                                      const Color.fromARGB(255, 134, 24, 185),
                                 ),
                                 onPressed: () {
                                   _toggleBookmark(lesson);

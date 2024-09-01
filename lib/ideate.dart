@@ -1,23 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:test/assume_beginner_mindset.dart';
 import 'package:test/brainstorming.dart';
 import 'package:test/editing_video.dart';
 import 'package:test/empa2.dart'; // Update with correct path if needed
-import 'package:test/extreme_user.dart';
 import 'package:test/facilitate_a_brainstorm.dart';
 import 'package:test/how_might_we_questions.dart';
 import 'package:test/i_like_i_wish_what_if.dart';
 import 'package:test/idea2.dart';
 import 'package:test/impose_constraints.dart';
-import 'package:test/interview_empathy.dart';
-import 'package:test/interview_preparation.dart';
 import 'package:test/power_of_ten.dart';
 import 'package:test/review_your_portfolio.dart';
 import 'package:test/secondpage.dart';
 import 'package:test/shooting_video.dart';
 import 'package:test/stoke.dart';
 import 'package:test/storytelling.dart';
-import 'package:test/what_how_why.dart';
 import 'package:test/yes_and_brainstorm.dart'; // Update with correct path if needed
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -440,9 +435,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         );
                       },
                     ),
-                    Expanded(
+                    const Expanded(
                       child: Center(
-                        child: const Text(
+                        child: Text(
                           'IDEATE',
                           style: TextStyle(
                             fontSize: 30,
@@ -456,7 +451,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Container(width: 48),
                   ],
                 ),
-                const SizedBox(height: 5),
+                const SizedBox(height: 20),
 
                 // Adding extra space above the search bar
                 const SizedBox(
@@ -479,7 +474,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     fillColor: Colors.grey[200],
                   ),
                 ),
-                const SizedBox(height: 55), // Adjust space after the search bar
+                const SizedBox(height: 40), // Adjust space after the search bar
 
                 // Lessons List
                 Expanded(
@@ -510,7 +505,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                   _isBookmarked(lesson)
                                       ? Icons.bookmark
                                       : Icons.bookmark_border,
-                                  color: Color.fromARGB(255, 243, 188, 68),
+                                  color:
+                                      const Color.fromARGB(255, 243, 188, 68),
                                 ),
                                 onPressed: () {
                                   _toggleBookmark(lesson);

@@ -34,7 +34,8 @@ class DeveloperPage extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/bg8.jpg'), // Replace with your image path
+            image: AssetImage(
+                'assets/images/DefineBG.png'), // Replace with your image path
             fit: BoxFit.cover,
           ),
         ),
@@ -42,26 +43,27 @@ class DeveloperPage extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.all(16.0),
-              child: Row(
+              child: Column(
                 children: [
-                  IconButton(
-                    icon: const Icon(Icons.arrow_back, color: Colors.white),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const Secondpage()),
-                      );
-                    },
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: IconButton(
+                      icon: const Icon(Icons.arrow_back, color: Colors.white),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Secondpage()),
+                        );
+                      },
+                    ),
                   ),
-                  const Expanded(
-                    child: Text(
-                      'Our Team',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 40.0,
-                        fontWeight: FontWeight.bold,
-                      ),
+                  const Text(
+                    'Dev Team',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 40.0,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ],
@@ -72,28 +74,28 @@ class DeveloperPage extends StatelessWidget {
                 padding: const EdgeInsets.all(16.0),
                 children: const [
                   DeveloperTile(
-                    name: 'Kekert Ice Roque',
-                    role: 'Backend Developer',
-                    imageUrl: 'assets/images/alice.png',
+                    name: 'Kert Ice Roque',
+                    role: 'Backend/ UI/UX',
+                    imageUrl: 'assets/images/ke.png',
                   ),
                   DeveloperTile(
-                    name: 'Christian Keith S. Abacahin',
-                    role: 'Frontend Developer/ UI/UX',
+                    name: 'Christian Keith Abacahin',
+                    role: 'Frontend/ UI/UX',
                     imageUrl: 'assets/images/bob.png',
                   ),
                   DeveloperTile(
                     name: 'Mirah Mea Aguilar',
-                    role: 'Frontend Developer/ UI/UX',
+                    role: 'Frontend / UI/UX',
                     imageUrl: 'assets/images/carol.png',
                   ),
                   DeveloperTile(
                     name: 'Joemari Obrial',
-                    role: 'Frontend Developer/ UI/UX',
+                    role: 'Frontend/ UI/UX',
                     imageUrl: 'assets/images/david.png',
                   ),
                   DeveloperTile(
                     name: 'Joshua Calma',
-                    role: 'Frontend Developer/ UI/UX',
+                    role: 'Frontend/ UI/UX',
                     imageUrl: 'assets/images/eva.png',
                   ),
                 ],
@@ -121,7 +123,8 @@ class DeveloperTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Colors.white.withOpacity(0.8), // White card background with some transparency
+      color: Colors.white
+          .withOpacity(0.8), // White card background with some transparency
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16.0), // Rounded corners
       ),
