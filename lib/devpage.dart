@@ -74,7 +74,7 @@ class DeveloperPage extends StatelessWidget {
                 padding: const EdgeInsets.all(16.0),
                 children: const [
                   DeveloperTile(
-                    name: 'Kert Ice Roque',
+                    name: 'Kert Ice Roque Kert',
                     role: 'Backend/ UI/UX',
                     imageUrl: 'assets/images/ke.png',
                   ),

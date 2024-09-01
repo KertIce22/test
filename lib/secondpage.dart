@@ -68,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.only(top: 40.0),
+                    padding: const EdgeInsets.only(top: 32.0),
                     child: ListView.builder(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 40.0), // Adjust horizontal padding
